@@ -10,7 +10,7 @@ Run the following command to install Docker:
 sudo apt install docker.io
 ```
 
-###Pull and Run the OpenVAS Container
+### Pull and Run the OpenVAS Container
 Use Docker to pull and run the OpenVAS container:
 
 ```bash
@@ -18,7 +18,7 @@ sudo docker run -d -p 443:443 --name openvas mikesplain/openvas
 ```
 This will download the OpenVAS Docker image and run it on port 443.
 
-###Start the OpenVAS Container
+### Start the OpenVAS Container
 If you ever need to restart the container, use this command:
 
 ```bash
@@ -34,7 +34,7 @@ Use the default credentials to log in:
 Username: admin
 Password: admin
 
-##Step 2: Perform an OpenVAS Scan on Metasploitable VM (IP: 10.0.2.4)
+## Step 2: Perform an OpenVAS Scan on Metasploitable VM (IP: 10.0.2.4)
 
 Access OpenVAS
 Open your browser and go to https://127.0.0.1.
@@ -48,7 +48,7 @@ After the scan completes, navigate to the Reports section.
 Export the scan report as a PDF.
 Save the PDF for documentation purposes.
 
-##Step 3: Generate an HTML Nikto Report for Metasploitable VM
+## Step 3: Generate an HTML Nikto Report for Metasploitable VM
 Nikto is a web server scanner that looks for vulnerabilities. Here's how to run it on the Metasploitable VM.
 
 Install Nikto
@@ -65,7 +65,7 @@ nikto -h http://10.0.2.4 -output metasploitable_nikto_report.html
 ```
 This command generates an HTML report (metasploitable_nikto_report.html) with the scan results.
 
-##Step 4: Grab the Banner Using Netcat
+## Step 4: Grab the Banner Using Netcat
 Netcat Command
 Use netcat to grab the banner for any port (for example, port 21 on Metasploitable VM):
 
