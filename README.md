@@ -14,7 +14,6 @@ sudo apt install docker.io
 Use Docker to pull and run the OpenVAS container:
 
 ```bash
-Copy code
 sudo docker run -d -p 443:443 --name openvas mikesplain/openvas
 ```
 This will download the OpenVAS Docker image and run it on port 443.
@@ -23,13 +22,11 @@ This will download the OpenVAS Docker image and run it on port 443.
 If you ever need to restart the container, use this command:
 
 ```bash
-Copy code
 sudo docker start openvas
 ```
 Once the container is running, OpenVAS will be accessible via your browser at:
 
 ```arduino
-Copy code
 https://127.0.0.1
 ```
 Use the default credentials to log in:
@@ -58,14 +55,12 @@ Install Nikto
 If Nikto is not installed, use the following command:
 
 ```bash
-Copy code
 sudo apt install nikto
 ```
 Run Nikto Scan
 Run a Nikto scan on the Metasploitable VM’s IP (10.0.2.4):
 
 ```bash
-Copy code
 nikto -h http://10.0.2.4 -output metasploitable_nikto_report.html
 ```
 This command generates an HTML report (metasploitable_nikto_report.html) with the scan results.
@@ -75,7 +70,6 @@ Netcat Command
 Use netcat to grab the banner for any port (for example, port 21 on Metasploitable VM):
 
 ```bash
-Copy code
 nc 10.0.2.4 21
 ```
 The above command will display the banner for the FTP service running on port 21. Once the banner is displayed, take a screenshot and save it.
